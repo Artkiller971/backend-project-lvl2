@@ -1,5 +1,6 @@
 import { Command } from 'commander/esm.mjs';
 import genDiff from './index.js';
+
 const program = new Command();
 
 program

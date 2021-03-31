@@ -5,10 +5,13 @@ publish:
 	npm publish --dry-run
 
 lint:
-	npx lint .
+	npx eslint .
 
 gendiff:
 	src/bin/gendiff.js
 
 test-coverage:
 	npm test -- --coverage --coverageProvider=v8
+
+tests:
+	node --experimental-vm-modules node_modules/.bin/jest
