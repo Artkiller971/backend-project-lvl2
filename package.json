@@ -12,7 +12,7 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "test": "npx -n --experimental-vm-modules jest"
+    "test": "npx jest"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,6 @@
   "bugs": {
     "url": "https://github.com/Artkiller971/backend-project-lvl2/issues"
   },
-
   "homepage": "https://github.com/Artkiller971/backend-project-lvl2#readme",
   "dependencies": {
     "commander": "^7.2.0",
@@ -37,6 +36,7 @@
     "eslint-plugin-jest": "^24.3.2",
     "jest": "^26.6.3",
     "jest-circus": "^26.6.3",
-    "jest-cli": "^26.6.3"
+    "jest-cli": "^26.6.3",
+    "jest-esm-transformer": "^1.0.0"
   }
 }

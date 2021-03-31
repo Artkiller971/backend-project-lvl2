@@ -13,5 +13,5 @@ gendiff:
 test-coverage:
 	npm test -- --coverage --coverageProvider=v8
 
-tests:
-	node --experimental-vm-modules node_modules/.bin/jest
+test:
+	npm test
