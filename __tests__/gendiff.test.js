@@ -28,3 +28,10 @@ test('nested plain', () => {
 
   expect(actual).toEqual(expected);
 });
+
+test('nested json', () => {
+  const expected = fs.readFileSync(getFixturePath('expectedJson.json'), 'utf-8');
+  const actual = genDiff(path1, path2, 'json');
+
+  expect(actual).toEqual(expected);
+});
