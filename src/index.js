@@ -6,7 +6,7 @@ import getFormatter from './formatters/index.js';
 
 const getDiffByKeys = (file1, file2) => {
   const allKeys = _.union(Object.keys(file1), Object.keys(file2));
-  const sortedKeys = allKeys.sort();
+  const sortedKeys = _.orderBy(allKeys);
   const result = sortedKeys
     .map((key) => {
       const value1 = file1[key];
