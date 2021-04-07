@@ -10,7 +10,7 @@
   "bin": {
     "gendiff": "src/bin/gendiff.js"
   },
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "scripts": {
     "test": "npx jest"
   },
