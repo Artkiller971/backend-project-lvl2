@@ -1,0 +1,26 @@
+{
+  "name": "@hexlet/code",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/Artkiller971/backend-project-lvl2/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Artkiller971/backend-project-lvl2/actions)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "gendiff": "./bin/gendiff.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@stylistic/eslint-plugin-js": "^4.1.0",
+    "eslint": "^9.21.0",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.2",
+    "prettier-eslint": "^16.3.0"
+  },
+  "dependencies": {
+    "commander": "^13.1.0"
+  }
+}
