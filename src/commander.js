@@ -1,5 +1,6 @@
 import { program } from 'commander';
 import parse from './parser.js';
+import generateDiff from './generateDiff.js';
 
 export default (() => {
   program
@@ -11,8 +12,9 @@ export default (() => {
     .option('-f, --format [type]', 'output format', 'json')
     .arguments('<filepath1> <filepath2>')
     .action((filepath1, filepath2, format = { format } || json) => {
-      console.log(parse(filepath1));
-      console.log(parse(filepath2));
+      const object1 = parse(filepath1);
+      const object2 = parse(filepath2);
+      console.log(generateDiff(object1, object2));
     });
 
   program.parse(process.argv);

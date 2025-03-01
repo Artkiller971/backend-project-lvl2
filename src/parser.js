@@ -1,6 +1,5 @@
 import * as fs from 'node:fs';
 import path from 'node:path';
-import { cwd } from 'node:process';
 
 const parse = (file, format = '.json') => {
   switch (format) {
