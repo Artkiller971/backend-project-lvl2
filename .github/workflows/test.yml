@@ -1,5 +1,5 @@
 # Пример для проекта на Node.js
-name: build
+name: tests
 on: push
 jobs:
   build: # имя взято для примера
