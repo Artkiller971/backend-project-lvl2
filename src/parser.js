@@ -7,7 +7,7 @@ const parse = (file, format = '.json') => {
       return JSON.parse(file);
     }
     default: {
-      return JSON.parse(file);
+      throw new Error('Unsupported format!');
     }
   }
 };

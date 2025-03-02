@@ -5,7 +5,7 @@
   "description": "[![Actions Status](https://github.com/Artkiller971/backend-project-lvl2/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Artkiller971/backend-project-lvl2/actions)",
   "main": "./bin/gendiff.js",
   "scripts": {
-    "test": "npx jest"
+    "test": "npx jest --coverage"
   },
   "bin": {
     "gendiff": "./bin/gendiff.js"
