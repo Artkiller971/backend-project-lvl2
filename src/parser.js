@@ -19,9 +19,7 @@ const parse = (file, format = '.json') => {
   }
 };
 
-const getFormat = (filename) => {
-  return path.extname(filename);
-};
+const getFormat = (filename) => (path.extname(filename));
 
 export default (filepath) => {
   const file = fs.readFileSync(path.resolve(filepath), 'utf-8');

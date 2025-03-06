@@ -1,6 +1,7 @@
 import globals from 'globals';
 import stylisticJs from '@stylistic/eslint-plugin-js';
 import fp from 'eslint-plugin-fp';
+import importPlugin from 'eslint-plugin-import';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -9,19 +10,21 @@ export default [
     plugins: {
       '@stylistic/js': stylisticJs,
       fp,
+      importPlugin,
     },
     rules: {
       semi: 'error',
       'no-shadow': 'error',
-      'fp/no-let':'error',
+      'fp/no-let': 'error',
+      'importPlugin/newline-after-import': 'error',
       'fp/no-mutation': 'error',
       'fp/no-mutating-methods': 'error',
       'no-unused-vars': 'error',
       'prefer-const': 'error',
       'consistent-return': 'error',
+      'arrow-body-style': ['error', 'as-needed'],
       'default-case': 'error',
       'no-else-return': 'error',
-      'prefer-const': 'error',
       '@stylistic/js/quotes': ['error', 'single'],
       '@stylistic/js/comma-dangle': ['error', {
         arrays: 'always-multiline',

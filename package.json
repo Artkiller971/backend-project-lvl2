@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "commander": "^13.1.0",
+    "eslint-plugin-import": "^2.31.0",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21"
   }
