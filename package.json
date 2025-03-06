@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/Artkiller971/backend-project-lvl2/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Artkiller971/backend-project-lvl2/actions)",
-  "main": "./bin/gendiff.js",
+  "main": "./index.js",
   "scripts": {
     "test": "npx jest --coverage ."
   },
