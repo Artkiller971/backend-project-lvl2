@@ -1,6 +1,4 @@
 import _ from 'lodash';
-import { generateDiffObject } from './generateDiff.js';
-import parser from './parser.js';
 const space = ' ';
 const separator = {
   unchanged: '  ',

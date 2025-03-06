@@ -3,7 +3,7 @@ import path, { dirname } from 'node:path';
 import * as fs from 'node:fs';
 
 import { generateDiffObject } from '../src/generateDiff.js';
-import stylishFormatter from '../src/stylishFormatter.js';
+import stylishFormatter from '../src/formatters/stylish.js';
 import parse from '../src/parser.js';
 
 const __filename = fileURLToPath(import.meta.url);
