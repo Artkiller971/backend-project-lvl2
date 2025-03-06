@@ -30,7 +30,8 @@ export default (() => {
 
   program
     .option('-f, --format [type]', 'output format', 'stylish')
-    .arguments('<filepath1> <filepath2>')
+    .argument('<filepath1>')
+    .argument('<filepath2>')
     .action((filepath1, filepath2) => {
       const object1 = parse(filepath1);
       const object2 = parse(filepath2);

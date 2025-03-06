@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import program from '../index.js';
+import program from '../src/commander.js';
 
 program();
