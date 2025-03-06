@@ -1,27 +1,6 @@
 import { program } from 'commander';
 import process from 'node:process';
-import parse from './parser.js';
-import { generateDiffObject } from './generateDiff.js';
-import stylishFormatter from './formatters/stylish.js';
-import plainFormatter from './formatters/plain.js';
-import jsonFormatter from './formatters/jsonFormatter.js';
-
-const getFormatter = (format) => {
-  switch (format) {
-    case 'stylish': {
-      return stylishFormatter;
-    }
-    case 'plain': {
-      return plainFormatter;
-    }
-    case 'json': {
-      return jsonFormatter;
-    }
-    default: {
-      return stylishFormatter;
-    }
-  }
-};
+import gendiff from '../index.js';
 
 program
   .name('gendiff')
@@ -33,16 +12,12 @@ program
   .arguments('<filepath1> <filepath2>')
   .action((filepath1, filepath2) => {
     try {
-      const object1 = parse(filepath1);
-      const object2 = parse(filepath2);
-      const diffObject = generateDiffObject(object1, object2);
-      const options = program.opts();
-      const formatter = getFormatter(options.format);
-      console.log(formatter(diffObject));
+      const format = program.opts().format;
+      console.log(gendiff(filepath1, filepath2, format));
     } catch (e) {
       console.log('lol');
       process.exitCode = 1;
     }
   });
 
-export default () => program.parse();
+export default () => program.parse(process.argv);
