@@ -9,11 +9,7 @@ const __dirname = dirname(__filename);
 
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 
-let jsonfile;
-
-beforeEach(() => {
-  jsonfile = fs.readFileSync(getFixturePath('json1.json'), 'utf-8').trim();
-});
+const jsonfile = fs.readFileSync(getFixturePath('json1.json'), 'utf-8').trim();
 
 test('parser', () => {
   const expected = JSON.parse(jsonfile);

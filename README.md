@@ -132,95 +132,113 @@ Property 'group3' was added with value: [complex value]
 
 Json:
 ```
-{
-  "common": {
-    "status": "unchanged",
-    "children": {
-      "follow": {
+[
+  {
+    "key": "common",
+    "status": "nested",
+    "children": [
+      {
+        "key": "follow",
         "status": "added",
-        "content": false
+        "value": false
       },
-      "setting1": {
+      {
+        "key": "setting1",
         "status": "unchanged",
-        "content": "Value 1"
+        "value": "Value 1"
       },
-      "setting2": {
+      {
+        "key": "setting2",
         "status": "deleted",
-        "content": 200
+        "value": 200
       },
-      "setting3": {
+      {
+        "key": "setting3",
         "status": "changed",
-        "from": true,
-        "to": null
+        "oldValue": true,
+        "newValue": null
       },
-      "setting4": {
+      {
+        "key": "setting4",
         "status": "added",
-        "content": "blah blah"
+        "value": "blah blah"
       },
-      "setting5": {
+      {
+        "key": "setting5",
         "status": "added",
-        "content": {
+        "value": {
           "key5": "value5"
         }
       },
-      "setting6": {
-        "status": "unchanged",
-        "children": {
-          "doge": {
-            "status": "unchanged",
-            "children": {
-              "wow": {
+      {
+        "key": "setting6",
+        "status": "nested",
+        "children": [
+          {
+            "key": "doge",
+            "status": "nested",
+            "children": [
+              {
+                "key": "wow",
                 "status": "changed",
-                "from": "",
-                "to": "so much"
+                "oldValue": "",
+                "newValue": "so much"
               }
-            }
+            ]
           },
-          "key": {
+          {
+            "key": "key",
             "status": "unchanged",
-            "content": "value"
+            "value": "value"
           },
-          "ops": {
+          {
+            "key": "ops",
             "status": "added",
-            "content": "vops"
+            "value": "vops"
           }
-        }
+        ]
       }
-    }
+    ]
   },
-  "group1": {
-    "status": "unchanged",
-    "children": {
-      "baz": {
+  {
+    "key": "group1",
+    "status": "nested",
+    "children": [
+      {
+        "key": "baz",
         "status": "changed",
-        "from": "bas",
-        "to": "bars"
+        "oldValue": "bas",
+        "newValue": "bars"
       },
-      "foo": {
+      {
+        "key": "foo",
         "status": "unchanged",
-        "content": "bar"
+        "value": "bar"
       },
-      "nest": {
+      {
+        "key": "nest",
         "status": "changed",
-        "from": {
+        "oldValue": {
           "key": "value"
         },
-        "to": "str"
+        "newValue": "str"
       }
-    }
+    ]
   },
-  "group2": {
+  {
+    "key": "group2",
     "status": "deleted",
-    "content": {
+    "value": {
       "abc": 12345,
       "deep": {
         "id": 45
       }
     }
   },
-  "group3": {
+  {
+    "key": "group3",
     "status": "added",
-    "content": {
+    "value": {
       "deep": {
         "id": {
           "number": 45
@@ -229,7 +247,7 @@ Json:
       "fee": 100500
     }
   }
-}
+]
 ```
 ## Showcase
 

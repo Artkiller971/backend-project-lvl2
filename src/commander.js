@@ -15,8 +15,7 @@ program
       const format = program.opts().format;
       console.log(gendiff(filepath1, filepath2, format));
     } catch (e) {
-      console.log('lol');
-      process.exitCode = 1;
+      console.log(e.message);
     }
   });
 

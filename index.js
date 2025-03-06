@@ -1,5 +1,5 @@
 import parse from './src/parser.js';
-import { generateDiffObject } from './src/generateDiff.js';
+import generateDiffObject from './src/generateDiff.js';
 import getFormatter from './src/getFormatter.js';
 
 export default (filepath1, filepath2, format = 'stylish') => {

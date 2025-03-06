@@ -1,5 +1,6 @@
 import globals from 'globals';
 import stylisticJs from '@stylistic/eslint-plugin-js';
+import fp from 'eslint-plugin-fp';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -7,9 +8,16 @@ export default [
     languageOptions: { globals: globals.node },
     plugins: {
       '@stylistic/js': stylisticJs,
+      fp,
     },
     rules: {
       semi: 'error',
+      'no-shadow': 'error',
+      'fp/no-let':'error',
+      'fp/no-mutation': 'error',
+      'fp/no-mutating-methods': 'error',
+      'no-unused-vars': 'error',
+      'prefer-const': 'error',
       'consistent-return': 'error',
       'default-case': 'error',
       'no-else-return': 'error',
@@ -24,6 +32,7 @@ export default [
         importAttributes: 'always',
         dynamicImports: 'always',
       }],
+      '@stylistic/js/padded-blocks': ['error', { blocks: 'never' }],
       '@stylistic/js/no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0 }],
       '@stylistic/js/no-trailing-spaces': ['error'],
       '@stylistic/js/eol-last': ['error', 'always'],
