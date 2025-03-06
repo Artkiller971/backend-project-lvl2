@@ -40,9 +40,9 @@ program
       const formatter = getFormatter(options.format);
       console.log(formatter(diffObject));
     } catch (e) {
-      console.log(e.message);
+      console.log('lol');
       process.exitCode = 1;
     }
   });
 
-export default () => program.parse(process.argv);
+export default () => program.parse();

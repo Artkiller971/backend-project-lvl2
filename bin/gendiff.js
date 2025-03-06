@@ -2,4 +2,4 @@
 
 import program from '../src/commander.js';
 
-program(process.argv);
+program();

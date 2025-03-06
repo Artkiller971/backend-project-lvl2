@@ -231,3 +231,6 @@ Json:
   }
 }
 ```
+## Showcase
+
+[![asciicast](https://asciinema.org/a/vya5PO7EtWcEL82IoaloWP0xZ.svg)](https://asciinema.org/a/vya5PO7EtWcEL82IoaloWP0xZ)
